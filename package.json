@@ -1,0 +1,51 @@
+{
+  "name": "pcc-server",
+  "version": "0.1.0",
+  "description": "Remode Desktop Middleware Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --inspect=5858 -r ts-node/register ./src/server.ts",
+    "start:watch": "nodemon",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drweb86/pcc-server.git"
+  },
+  "keywords": [
+    "remote",
+    "desktop",
+    "middleware"
+  ],
+  "author": "Siarhei Kuchuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drweb86/pcc-server/issues"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "npm start",
+    "ext": "ts"
+  },
+  "homepage": "https://github.com/drweb86/pcc-server#readme",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "@types/node": "^11.13.7",
+    "body-parser": "^1.18.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.2",
+    "express": "^4.16.4",
+    "generate-password": "^1.4.1",
+    "nodemon": "^1.18.11",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.4"
+  }
+}

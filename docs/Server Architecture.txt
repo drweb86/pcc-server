@@ -1,0 +1,12 @@
+Client checks if token exists.
+    If token exists - it sends it to server.
+         Server is to verify token and register client out of it 
+            if it is not registered already.
+    If token is missing - it acquires a new one.
+        Server is to encrypt data to token, register it,
+            send it back imposing limits.
+    
+    Next, client sends poll each 10 sec with its token.
+        Server is to get all messages for client and return them with deletion.
+    Client-controller sends protocol request to client 
+    
